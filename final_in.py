@@ -10,7 +10,7 @@ from keras.layers import Dense, Embedding, LSTM, Dropout, Bidirectional, Input
 from sklearn.model_selection import train_test_split
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
-# Download NLTK stopwords
+
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
@@ -18,7 +18,7 @@ stop_words = set(stopwords.words('english'))
 train = pd.read_csv(r'C:\Users\Karthika\Documents\train.csv', encoding='ISO-8859-1')
 test = pd.read_csv(r'C:\Users\Karthika\Documents\test.csv', encoding='ISO-8859-1')
 
-# Data preprocessing function
+
 def preprocess_text(text):
     if not isinstance(text, str):
         return ''
