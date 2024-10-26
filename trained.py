@@ -9,11 +9,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
 import streamlit as st
 
-# Download NLTK stopwords
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
-# Load the pre-trained model
 model_path = 'sentiment_model.h5'
 model = load_model(model_path)
 
